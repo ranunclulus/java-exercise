@@ -1,4 +1,4 @@
-package week1;
+package week1.day4;
 
 public class ScannerExReTest {
     public static void main(String[] args) {

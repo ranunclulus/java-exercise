@@ -1,4 +1,4 @@
-package week1;
+package week1.day4;
 
 import java.util.Scanner;
 
