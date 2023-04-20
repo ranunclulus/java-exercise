@@ -2,9 +2,9 @@ package CodeUp;
 
 import java.util.Scanner;
 
-public class CodeUp1012 {
+public class CodeUp1015 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.printf("%.6f", sc.nextFloat());
+        System.out.printf("%.2f", sc.nextFloat());
     }
 }
