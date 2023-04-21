@@ -19,5 +19,6 @@ public class SpaceInvadersMember {
         sp.moveLeft();
         sp.meveRight();
         sp.meveRight();
+        System.out.printf("최종 위치: %d", sp.location); // 멤버변수 접근: 변수명.멤버변수
     }
 }
