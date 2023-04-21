@@ -11,5 +11,8 @@ public class UserTest {
         user2.name = "홍길동";
         user2.phonenumber = "000-1111-1111";
         user2.age = 44;
+
+        System.out.printf("%s 님은 성인입니까? %S\n", user1.name, user1.isAdult());
+        System.out.printf("%s 님은 성인입니까? %S\n", user2.name, user2.isAdult());
     }
 }
