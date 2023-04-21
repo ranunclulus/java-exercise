@@ -2,11 +2,9 @@ package CodeUp;
 
 import java.util.Scanner;
 
-public class CodeUp1016 {
+public class CodeUp1018 {
     public static void main(String[] args) {
-        int num;
         Scanner sc = new Scanner(System.in);
-        num = sc.nextInt();
-        System.out.printf("%d %d %d", num, num, num);
+        System.out.println(sc.next());
     }
 }
