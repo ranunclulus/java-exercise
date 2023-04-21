@@ -1,5 +1,7 @@
 package week1.day5;
 
+import static java.lang.Math.sqrt;
+
 public class Point {
     int x;
     int y;
