@@ -12,5 +12,8 @@ public class IfWrong {
         else if (score >= 70) {
             System.out.println("C");
         }
+        else {
+            System.out.println("F");
+        }
     }
 }
