@@ -24,6 +24,9 @@ public class SwitchCaseDayOfWeek {
                 break;
             case 7:
                 System.out.println("sun");
+                break;
+            default:
+                System.out.println("해당하는 요일이 없습니다");
         }
     }
 }
