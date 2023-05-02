@@ -1,4 +1,4 @@
-package week4.day1;
+package week3.day1;
 
 public class MultipleFunction {
     public static void multiplication(int number){

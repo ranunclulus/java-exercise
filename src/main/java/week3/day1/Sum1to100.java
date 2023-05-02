@@ -1,4 +1,4 @@
-package week4.day1;
+package week3.day1;
 
 public class Sum1to100 {
     public static void main(String[] args) {
