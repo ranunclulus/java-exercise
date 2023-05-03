@@ -10,5 +10,6 @@ public class IsPrime1 {
             }
         }
         System.out.println("count = " + count);
+        System.out.println((count == 0) ? "소수입니다" : "소수가 아닙니다");
     }
 }
