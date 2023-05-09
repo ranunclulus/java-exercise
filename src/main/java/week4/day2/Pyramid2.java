@@ -11,7 +11,7 @@ public class Pyramid2 {
         }
     }
 
-    public String makeALine(String spaceChar, int height, int i) {
+    public static String makeALine(String spaceChar, int height, int i) {
         return String.format("%s%s\n", spaceChar.repeat(height - i - 1), "*".repeat(2 * i + 1));
     }
 
