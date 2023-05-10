@@ -3,6 +3,7 @@ package week4.day3;
 public class DiamondDrawer extends ShapeDrawer2 {
     @Override
     public String makeALine(int h, int i) {
+
         return String.format("%s%s", " ".repeat(h - i), "*".repeat(2 * i - 1));
     }
     public void printShape() {
