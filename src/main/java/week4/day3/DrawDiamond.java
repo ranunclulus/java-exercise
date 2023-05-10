@@ -13,6 +13,17 @@ public class DrawDiamond {
         return result;
     }
 
+    public static String makeALine(int h, int i) {
+        int pivot = h / 2;
+
+        if(i <= pivot) {
+            return String.format("%s%s\n", getRepeatedSymbol(" ", pivot - i), getRepeatedSymbol("*", 2 * i + 1));
+        } else {
+            return String.format("%s%s\n", getRepeatedSymbol(" ", i - pivot), getRepeatedSymbol("*", -2 * i + 2 * pivot + h));
+        }
+
+    }
+
     public static void main(String[] args) {
         int h = 7;
         int pivot = h / 2;
@@ -33,6 +44,9 @@ public class DrawDiamond {
                 //System.out.printf("%d %d\n", i - pivot, -2 * i + 2 * pivot + h);
                 System.out.printf("%s%s\n", getNoRepeatedSymbol(" ", i - pivot), getNoRepeatedSymbol("*", -2 * i + 2 * pivot + h));
             }
+        }
+        for (int i = 0; i < h; i++) {
+            System.out.printf("%s", makeALine(h, i));
         }
     }
 }
