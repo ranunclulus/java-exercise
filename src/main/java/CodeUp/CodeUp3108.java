@@ -59,12 +59,6 @@ public class CodeUp3108 {
         }
     }
 
-    private void printStudents() {
-        for (Student student : students) {
-            System.out.printf("%s %d %s\n", student.getCode(), student.getTestId(), student.getName());
-        }
-    }
-
     private void deleteStudent(Student pstudent) {
         for (int i = 0; i < students.size(); i++) {
             if(students.get(i).getTestId() == pstudent.getTestId()) students.remove(i);
