@@ -2,11 +2,13 @@ package week4.day5;
 
 import week4.day4.ReadFile;
 
+import javax.sql.rowset.JoinRowSet;
 import java.io.*;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -32,20 +34,35 @@ public class ReadFileEx implements Reader{
         return lines;
     }
 
+    // 한 줄만
     public Hospital parse(String str) {
         String[] splitted = str.split(",");
-        System.out.println(Arrays.toString(splitted));
-        Address address = new Address("", "");
-        Hospital hospital = new Hospital("", "", address);
+        Address address = new Address(splitted[10], splitted[5], splitted[7]);
+        Hospital hospital = new Hospital(splitted[1], splitted[11], address);
         return hospital;
+    }
+
+    // 전체 데이터에 대해 돌리기
+    public List<Hospital> getHospitals(List<String> lines) {
+        List<Hospital> hospitals = new ArrayList<>();
+        for (String line : lines) {
+            hospitals.add(parse(line));
+        }
+        return hospitals;
+    }
+
+    public void printHospital(List<Hospital> hospitals) {
+        for (Hospital hospital : hospitals){
+            System.out.printf("%s %s %s\n", hospital.getName(), hospital.getWebsiteAdress(), hospital.getAddress());
+        }
     }
 
     public static void main(String[] args) throws IOException {
         ReadFileEx rfe = new ReadFileEx(Charset.forName("UTF-8"));
-        List<String> result = rfe.getLines("hospital_info_0920_utf8.csv");
-        for (int i = 0; i < 10; i++) {
-            rfe.parse(result.get(i));
-        }
+        List<String> strLines = rfe.getLines("hospital_info_0920_utf8.csv");
+        List<Hospital> parseHospital = rfe.getHospitals(strLines);
+        rfe.printHospital(parseHospital);
+
     }
 }
 
