@@ -53,7 +53,7 @@ public class ReadFileEx implements Reader{
 
     public void printHospital(List<Hospital> hospitals) {
         for (Hospital hospital : hospitals){
-            System.out.printf("%s %s %s\n", hospital.getName(), hospital.getWebsiteAdress(), hospital.getAddress());
+            System.out.printf("%s %s %s\n", hospital.getName(), hospital.getWebsiteAdress(), hospital.getAddress().getFullAddr());
         }
     }
 
