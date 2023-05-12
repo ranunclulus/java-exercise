@@ -9,7 +9,7 @@ import java.nio.file.Paths;
 import java.util.LinkedList;
 import java.util.List;
 
-public class ReadFileEx {
+public class ReadFileEx implements Reader{
     public List<String> getLines(String fileName) {
         List<String> lines = new LinkedList<>();
 
