@@ -1,4 +1,4 @@
-package week4.day4;
+package week4.day5;
 
 public class Hospital {
     String name;
