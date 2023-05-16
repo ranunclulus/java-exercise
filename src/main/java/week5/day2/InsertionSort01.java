@@ -2,7 +2,7 @@ package week5.day2;
 
 import java.util.Arrays;
 
-public class InsertionSort01 {
+public class InsertionSort01 <T> {
     public int[] sort(int[] arr, boolean isAscending) {
         for (int i = 1; i < arr.length; i++) {
             for (int j = i; j > 0 ; j--) {
@@ -15,6 +15,10 @@ public class InsertionSort01 {
             }
         }
         return arr;
+    }
+
+    public int[] sort(int[] arr) {
+        return sort(arr, true);
     }
 
     public static void main(String[] args) {
