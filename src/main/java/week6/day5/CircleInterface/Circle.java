@@ -11,4 +11,9 @@ public class Circle implements Shape{
     public double calculateArea() {
         return (radius * radius * 3.14);
     }
+
+    @Override
+    public double calculaterPerimeter() {
+        return (2 * radius * 3.14);
+    }
 }
