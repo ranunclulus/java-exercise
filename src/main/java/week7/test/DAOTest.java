@@ -1,7 +1,9 @@
 package week7.test;
 
 import org.junit.jupiter.api.Test;
+import week7.model.MemberDAO;
 
+import java.lang.reflect.Member;
 import java.util.Optional;
 
 import static junit.framework.TestCase.*;
@@ -12,7 +14,7 @@ public class DAOTest {
         String id = "tester";
         String ps = "1234";
 
-        MemberDAO dao = new MemberDao();
+        MemberDAO dao = new MemberDAO();
         dao.initMember(); // 테스팅을 위해 디비 초기화
         Optional<Member> user = dao.login(id, ps);
         if(user.isEmpty()) { // 유저가 없다면
