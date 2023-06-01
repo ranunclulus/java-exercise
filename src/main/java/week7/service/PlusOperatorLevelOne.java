@@ -1,28 +1,31 @@
 package week7.service;
 
 public class PlusOperatorLevelOne implements IOperator{
+    int a;
+    int b;
     @Override
     public void setA(int a) {
-
+        this.a = a;
     }
 
     @Override
     public void setB(int b) {
-
+        this.b = b;
     }
 
     @Override
     public void generateQuestion(int max) {
-
+        a = (int)(Math.random() * max);
+        b = (int)(Math.random() * (max - a));
     }
 
     @Override
     public String getQuestionMsg() {
-        return null;
+        return String.format("%d + %d = ", a, b);
     }
 
     @Override
     public boolean isEquals(int answer) {
-        return false;
+        return (a + b) == answer;
     }
 }
