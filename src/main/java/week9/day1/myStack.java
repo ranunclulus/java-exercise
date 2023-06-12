@@ -1,10 +1,10 @@
 package week9.day1;
 
-public class Stack {
+public class myStack {
     private int top;
     private final int[] arr = new int[16];
 
-    public Stack(){
+    public myStack(){
         top = -1;
     }
 
