@@ -83,9 +83,6 @@ public class Prim {
         return totalWeight;
     }
 
-
-
-
     public static void main(String[] args) throws IOException {
         new Prim().solution();
     }
