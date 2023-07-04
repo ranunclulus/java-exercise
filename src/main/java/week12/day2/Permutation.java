@@ -32,7 +32,7 @@ public class Combination {
                 this.permNumbers(n, r, k + 1, perm, used);
                 // i를 k의 위치에 담는 과정을 마무리했으면
                 // i를 다시 사용 가능한 형태로
-                used[i] = true;
+                used[i] = false;
             }
         }
     }
