@@ -1,10 +1,8 @@
 package week12.day2;
 
-import week12.day1.Permutation;
-
 import java.util.Arrays;
 
-public class Combination {
+public class Permutation {
     private void permNumbers(
             // 0 ~ n 까지의 숫자 중
             int n,
@@ -38,7 +36,7 @@ public class Combination {
     }
 
     public static void main(String[] args) {
-        Combination com = new Combination();
+        Permutation com = new Permutation();
         com.permNumbers(5, 3, 0, new int[3], new boolean[5]);
     }
 }
