@@ -3,7 +3,9 @@ package week12.day4;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.StringTokenizer;
 
 public class Dijkstra {
@@ -42,10 +44,12 @@ public class Dijkstra {
         // 2. 시작 정점까지의 거리는 0
         dist[start] = 0;
 
+
         // 다익스트라 시작
         // 반복 기준: 아직 방문한 점이 남아 있을 때
         // -> 노드의 개수만큼 반복
         for (int i = 0; i < nodes; i++) {
+
             // 이번에 방문할 정점을 선택
             // -> 현재 정점들까지의 최단 경로 정보 중 가장 가까운 정점
             // 최소값 비교용 변수
