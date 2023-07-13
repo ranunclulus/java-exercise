@@ -1,7 +1,6 @@
-package week13.day3;
+package week13.day4;
 
-import java.util.Collections;
-import java.util.PriorityQueue;
+import java.util.Arrays;
 
 public class BinaryMaxHeap {
     private int[] heap;
@@ -10,6 +9,26 @@ public class BinaryMaxHeap {
     public BinaryMaxHeap() {
         heap = new int[32];
         size = 0;
+    }
+
+    // arr는 힙이 아니라고 가정
+    public BinaryMaxHeap(int[] arr) {
+        // TODO
+        // 주어진 arr를 heap의 형태로 저장
+        heap = Arrays.copyOf(arr, arr.length);
+        size = heap.length;
+        // 마지막 자식이 존재하는 노드
+        int lastIndex = (size - 1);
+        int lastParentIndex = (lastIndex - 1) / 2;
+        // reHeapDown
+
+        for (int i = lastParentIndex; i >= 0 ; i--) {
+            reHeapDown(i);
+        }
+    }
+
+    public boolean isEmpty() {
+        return size == 0;
     }
 
     // 삽입 연산
@@ -73,14 +92,13 @@ public class BinaryMaxHeap {
     }
 
     public static void main(String[] args) {
-        BinaryMaxHeap binaryMaxHeap = new BinaryMaxHeap();
-        for (int i = 0; i < 32; i++) {
-            binaryMaxHeap.insert(i);
-        }
-        for (int i = 0; i < 32; i++) {
+        BinaryMaxHeap binaryMaxHeap = new BinaryMaxHeap(
+                new int[] {
+                        1, 21, 14, 6, 10, 2, 5, 6, 8
+                }
+        );
+        while(!binaryMaxHeap.isEmpty()) {
             System.out.println(binaryMaxHeap.remove());
         }
-
     }
-
 }
